@@ -1,6 +1,7 @@
 "use client";
 import 'font-awesome/css/font-awesome.min.css';
 import { useEffect, useState } from "react";
+import Image from 'next/image';
 
 
 const ScrollIndicator = () => {
