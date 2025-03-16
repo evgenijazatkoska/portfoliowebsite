@@ -351,13 +351,13 @@ export default function Evgenija() {
   const [fullname, setFullname] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [error, setError] = useState<string[]>([]);  // Explicitly set the type to string[]
+  const [error, setError] = useState<string[]>([]);  
   const [success, setSuccess] = useState(false);
-  const [loading, setLoading] = useState(false);  // Add loading state
+  const [loading, setLoading] = useState(false);  
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);  // Set loading state to true
+    setLoading(true);  
 
     const res = await fetch('api/contact', {
       method: "POST",
@@ -370,7 +370,7 @@ export default function Evgenija() {
     const { msg, success } = await res.json();
     setError(msg);
     setSuccess(success);
-    setLoading(false);  // Set loading state to false
+    setLoading(false);  
 
     if (success) {
       setFullname('');
@@ -389,7 +389,7 @@ export default function Evgenija() {
       <section className="hero-section">
         <div className="header">
           <h1 className="fade-in">
-            Hi, I'm Evgenija, a front-end <span className="typing">developer</span>
+            Hi, I&apos;m Evgenija, a front-end <span className="typing">developer</span>
           </h1>
         </div>
 
