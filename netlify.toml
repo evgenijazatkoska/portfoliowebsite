@@ -1,6 +1,5 @@
 [build]
-  functions = "netlify/functions"  # Path to your serverless functions
+  functions = "netlify/functions"  
+  function_timeout = 30 
 
-[build.functions]
-  timeout = 30  # Timeout in seconds (increase this as needed)
 
