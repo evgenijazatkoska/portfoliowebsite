@@ -44,3 +44,18 @@ export async function POST(req: Request) {
     });
   }
 }
+export async function GET() {
+  return NextResponse.json({
+    msg: "This API route only supports POST requests.",
+    success: false,
+  });
+}
+
+export async function OPTIONS() {
+  const headers = new Headers();
+  headers.set("Access-Control-Allow-Origin", "*");
+  headers.set("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
+  headers.set("Access-Control-Allow-Headers", "Content-Type");
+
+  return new Response(null, { headers });
+}
