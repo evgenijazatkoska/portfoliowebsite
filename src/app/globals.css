@@ -205,8 +205,14 @@ h2 {
 }
 .project-image {
   width: 100%;
-  height: 180px;
+  height:  11.25rem;;
   object-fit: cover;
+  object-position: center;
+}
+@supports (-webkit-touch-callout: none) {
+  .project-image {
+    transform: translateZ(0); 
+  }
 }
 
 .project-content {
