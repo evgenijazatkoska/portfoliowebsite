@@ -359,7 +359,7 @@ export default function Evgenija() {
     e.preventDefault();
     setLoading(true);  
 
-    const res = await fetch('api/contact', {
+    const res = await fetch('/api/contact', {
       method: "POST",
       headers: {
         "content-type": "application/json"
