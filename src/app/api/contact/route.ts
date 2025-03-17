@@ -39,13 +39,15 @@ import Contact from "@/app/models/contact";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
+
+
 export async function POST(req: Request) {
   const { fullname, email, message } = await req.json();
 
   try {
     await connectDB(); // Ensure MongoDB connection
 
-    // Create a new contact message entry in the database
+    
     await Contact.create({ fullname, email, message });
 
     // Return success response in JSON format
