@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const ScrollIndicator = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -61,7 +62,7 @@ return () => clearInterval(interval);
   const ProjectCard = ({ title, description, image, url }: { title: string; description: string; image: string; url: string }) => {
     return (
       <div className="project-card fade-in">
-        <img src={image} alt={title} className="project-image" />
+        <Image src={image} alt={title} width={500} height={300} className="project-image" />
         <div className="project-content">
           <h3>{title}</h3>
           <p>{description}</p>
@@ -184,43 +185,44 @@ return () => clearInterval(interval);
       <div className="page-divider"></div>
 
       {/* Language Section */}
-      <section id="language" className="language-section">
-        <h3 className='techText'>Technologies I Use</h3>
-        <div className="language-list">
-        <div className="language-card">
-     <img src="/html.svg" alt="HTML" className="icon" />
-       <h4>HTML</h4>
+
+<section id="language" className="language-section">
+  <h3 className="techText">Technologies I Use</h3>
+  <div className="language-list">
+    <div className="language-card">
+      <Image src="/html.svg" alt="HTML" width={50} height={50} className="icon" />
+      <h4>HTML</h4>
     </div>
     <div className="language-card">
-     <img src="/css.svg" alt="CSS" className="icon" />
-       <h4>CSS</h4>
-     </div>
-     <div className="language-card">
-     <img src="/js.svg" alt="JS" className="icon" />
-       <h4>JavaScript</h4>
-     </div>
-     <div className="language-card">
-     <img src="/react.svg" alt="REACT" className="icon" />
-       <h4>React</h4>
-     </div>
-     <div className="language-card">
-     <img src="/scss.svg" alt="SCSS" className="icon" />
-       <h4>SCSS</h4>
-     </div>
-     <div className="language-card">
-     <img src="/ts.svg" alt="TS" className="icon" />
-       <h4>TypeScript</h4>
-     </div>
-     <div className="language-card">
-     <img src="/git.svg" alt="GIT" className="icon" />
-       <h4>Git</h4>
-     </div>
-     <div className="language-card">
-     <img src="/bootstrap.svg" alt="BOOSTRAP" className="icon" />
-       <h4>Bootstrap</h4>
-     </div>
-        </div>
-      </section>
+      <Image src="/css.svg" alt="CSS" width={50} height={50} className="icon" />
+      <h4>CSS</h4>
+    </div>
+    <div className="language-card">
+      <Image src="/js.svg" alt="JavaScript" width={50} height={50} className="icon" />
+      <h4>JavaScript</h4>
+    </div>
+    <div className="language-card">
+      <Image src="/react.svg" alt="React" width={50} height={50} className="icon" />
+      <h4>React</h4>
+    </div>
+    <div className="language-card">
+      <Image src="/scss.svg" alt="SCSS" width={50} height={50} className="icon" />
+      <h4>SCSS</h4>
+    </div>
+    <div className="language-card">
+      <Image src="/ts.svg" alt="TypeScript" width={50} height={50} className="icon" />
+      <h4>TypeScript</h4>
+    </div>
+    <div className="language-card">
+      <Image src="/git.svg" alt="Git" width={50} height={50} className="icon" />
+      <h4>Git</h4>
+    </div>
+    <div className="language-card">
+      <Image src="/bootstrap.svg" alt="Bootstrap" width={50} height={50} className="icon" />
+      <h4>Bootstrap</h4>
+    </div>
+  </div>
+</section>
 
       <div className="page-divider"></div>
 
