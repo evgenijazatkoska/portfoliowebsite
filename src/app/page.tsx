@@ -112,6 +112,10 @@ return () => clearInterval(interval);
       body: JSON.stringify({ fullname, email, message })
     });
 
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
+
     const { msg, success } = await res.json();
     setError(msg);
     setSuccess(success);
